@@ -14,10 +14,6 @@ app.directive('lessonHider', function ()
         controller: function ($scope, $timeout, lessonService)
         {
             $scope.getSchedule = lessonService.getSchedule;
-            $scope.updateView = function ()
-            {
-                $scope.strikethrough = $scope.strikethrough ? null : {'text-decoration': 'line-through'}
-            }
         },
         link: function (scope, element, attr)
         {
@@ -36,6 +32,10 @@ app.directive('lessonHider', function ()
                     return false;
                 });
             });
+            scope.updateView = function ()
+            {
+                scope.strikethrough = scope.strikethrough ? null : {'text-decoration': 'line-through'}
+            }
         }
     };
 });
