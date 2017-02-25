@@ -1,0 +1,10 @@
+<li>
+    <input type="checkbox" ng-checked="strikethrough" ng-click="updateView()">
+    <span ng-click="dayAlert({ lesson: lesson, day: lessonDay })" ng-style="strikethrough">
+        {{ lesson }}
+    </span>
+    <span>
+        <button ng-click="remove({index: i})">Remove</button>
+    </span>
+    </input>
+</li>

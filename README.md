@@ -18,7 +18,7 @@ All that is provided is the schedule.json and app.js, so let's start by laying o
 * 'index.html'
 * 'lessonCtrl.js'
 * 'lessonService.js'
-* 'lessonHider.js'
+* 'lessonHider.html'
 
 Let's start out by creating those files and setting up the necessary basics such as initializing the app and controller.
 
@@ -42,7 +42,7 @@ you have that done we can add a property called `templateUrl: ` to our directive
 `lessonHider.html`. Now all we need to do is add the directive to our `index.html` to see if it works. Remember that directives are converted to snake-case in
 html!
 
-If you are not seeing the text in your `lessonHider.html` it's time to double check your steps. Did you remember to add your `lessonHider.js` to your
+If you are not seeing the text in your `lessonHider.html` it's time to double check your steps. Did you remember to add your `lessonHider.html` to your
 `index.html`? Did you convert your directive to snake-case? Is the file path in your templateUrl property correct?
 
 Your directive in your html should look like this: `<lesson-hider></lesson-hider>`
@@ -69,7 +69,7 @@ to your `$scope`. Give the lessons array these values:
 Now inside of our directive's template we can display the array of lessons the same way we would in any of our other html. Add the lessons array to the template
 and reload the page to make sure it prints out what we want.
 
-Cool! But still not much that's new, so let's dive a little deeper. Inside of your `lessonHider.js` add another property to your return object called `link` and
+Cool! But still not much that's new, so let's dive a little deeper. Inside of your `lessonHider.html` add another property to your return object called `link` and
 give it the value of a function. The link method will always be passed three parameters: `scope`, `element`, and `attributes`, in that order. At this point your
 directive should look like this:
 
